@@ -1,0 +1,790 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import "compass/css3";
+
+
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+/***********  NAVBAR STYLE ***********/
+
+.navbar-default {
+  background: transparent;
+  border: 0;
+  padding-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+ul.nav.navbar-nav  li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+ul.nav.navbar-nav  li a:hover,
+ul.nav.navbar-nav  li a:focus {
+  color: #ffff00;
+}
+
+ul.nav.navbar-nav.navbar-right li a {
+  color: #ffff00;
+}
+
+ul.nav.navbar-nav.navbar-right li a:hover,
+ul.nav.navbar-nav.navbar-right li a:focus {
+  color: #fff;
+}
+
+
+
+
+
+/*********** END NAVBAR STYLE ***********/
+
+/*********** START STYLE STYLE ***********/
+
+.intro-header {
+  background: url(../img/background.jpg) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 10%;
+}
+
+@media (max-width: 320px) {
+  .intro-header {
+    padding-bottom: 30%;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 990px) {
+  .intro-header {
+    padding-bottom: 30%;
+  }
+}
+
+.intro-text {
+  color: #fff;
+  padding-top: 25%;
+  text-align: left;
+  padding-left: 10%;
+}
+
+
+@media screen  and (min-width: 320px) and (max-width: 768px) {
+  .intro-text h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .intro-text h2 {
+    font-size: 24px;
+  }
+}
+
+}
+.intro-text span {
+  color: #ffff00;
+}
+
+.author-name {
+  text-align: right;
+}
+
+/* START LOGIN SIGN UP STYLE */
+#wrapper{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;
+	margin: 0px auto;
+	width: 500px;
+	position: relative;
+  padding-left: 13%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 920px) {
+	#wrapper {
+		width: auto;
+	}
+}
+/**** Styling the form elements **/
+
+/**** general text styling ****/
+#wrapper a{
+	color: rgb(95, 155, 198);
+	text-decoration: underline;
+}
+
+#wrapper h1{
+	font-size: 32px;
+	color: rgb(6, 106, 117)
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+/** For the moment only webkit supports the background-clip:text; */
+#wrapper h1{
+  color: rgb(85, 85, 85);
+}
+
+#wrapper h1:after{
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+}
+
+#wrapper p{
+	margin-bottom:15px;
+}
+#wrapper p:first-child{
+	margin: 0px;
+}
+#wrapper label{
+	color: rgb(0, 0, 0);
+	position: relative;
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  {
+	color: rgb(190, 188, 188);
+	font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+	color: rgb(190, 188, 188);
+	font-style: italic;
+}
+input {
+  outline: none;
+}
+
+/* all the input except submit and checkbox */
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 3px;
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+}
+#wrapper input:not([type="checkbox"]):active,
+#wrapper input:not([type="checkbox"]):focus{
+	border: 1px solid rgba(91, 90, 90, 0.7);
+	background: rgba(238, 236, 240, 0.2);
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+}
+
+/** the magic icon trick ! **/
+
+
+/*styling both submit buttons */
+#wrapper p.button input{
+	width: 30%;
+	cursor: pointer;
+	background: rgb(255, 255, 255);
+	padding: 6px 5px;
+	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+	color: #555;
+	font-size: 18px;
+	margin-bottom: 10px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+
+}
+#wrapper p.button input:hover{
+	background: rgb(255, 255, 0);
+}
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+	background: rgb(40, 137, 154);
+	position: relative;
+	top: 1px;
+	border: 1px solid rgb(12, 76, 87);
+	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	   -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+p.login.button,
+p.signin.button{
+	text-align: right;
+	margin: 5px 0;
+}
+
+
+/* styling the checkbox "keep me logged in"*/
+.keeplogin{
+	margin-top: -5px;
+}
+.keeplogin input,
+.keeplogin label{
+	display: inline-block;
+	font-size: 12px;
+	font-style: italic;
+}
+.keeplogin input#loginkeeping{
+	margin-right: 5px;
+}
+.keeplogin label{
+	width: 80%;
+}
+
+
+/*styling the links to change from one form to another */
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 30px 20px 30px;
+	font-size: 12px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+	-webkit-border-radius: 0 0  5px 5px;
+	   -moz-border-radius: 0 0  5px 5px;
+	        border-radius: 0 0  5px 5px;
+}
+#wrapper p.change_link a {
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	padding: 2px 6px;
+	color: rgb(85, 85, 85);
+	margin-left: 10px;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 213, 21);
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s  linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s  linear;
+	transition: all 0.4s  linear;
+}
+#wrapper p.change_link a:hover {
+	color: rgb(0, 0, 0);
+	background: rgb(247, 247, 247);
+	border: 1px solid rgb(255, 255, 0);
+}
+#wrapper p.change_link a:active{
+	position: relative;
+	top: 1px;
+}
+/** Styling both forms **/
+#register,
+#login{
+	position: absolute;
+	top: 0px;
+	width: 88%;
+	padding: 18px 6% 60px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(255, 255, 255);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	   -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	        box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	-webkit-box-shadow: 5px;
+	-moz-border-radius: 5px;
+		 border-radius: 5px;
+}
+#register{
+	z-index: 21;
+	opacity: 0;
+}
+#login{
+	z-index: 22;
+}
+#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+	z-index: 22;
+	-webkit-animation-delay: .6s;
+	-webkit-animation-timing-function: ease-in;
+	-moz-animation-delay: .6s;
+	-moz-animation-timing-function: ease-in;
+	-o-animation-delay: .6s;
+	-o-animation-timing-function: ease-in;
+	-ms-animation-delay: .6s;
+	-ms-animation-timing-function: ease-in;
+	animation-delay: .6s;
+	animation-timing-function: ease-in;
+	-webkit-animation-name: scaleIn;
+	-moz-animation-name: scaleIn;
+	-ms-animation-name: scaleIn;
+	-o-animation-name: scaleIn;
+	animation-name: scaleIn;
+}
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+	-webkit-animation-timing-function: ease-out;
+	-moz-animation-timing-function: ease-out;
+	-o-animation-timing-function: ease-out;
+	-ms-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	-webkit-animation-name: scaleOut;
+	-moz-animation-name: scaleOut;
+	-ms-animation-name: scaleOut;
+	-o-animation-name: scaleOut;
+	animation-name: scaleOut;
+}
+
+/** the actual animation, credit where due : http://daneden.me/animate/ ***/
+.animate{
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+
+	-moz-animation-duration: 0.5s;
+	-moz-animation-fill-mode: both;
+
+	-o-animation-duration: 0.5s;
+	-o-animation-fill-mode: both;
+
+	-ms-animation-duration: 0.5s;
+	-ms-animation-fill-mode: both;
+
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+
+/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
+
+.lt8 #wrapper input{
+	padding: 10px 5px 10px 32px;
+    width: 92%;
+}
+.lt8 #wrapper input[type=checkbox]{
+	width: 10px;
+	padding: 0;
+}
+.lt8 #wrapper h1{
+	color: #066A75;
+}
+.lt8 #register{
+	display: none;
+}
+.lt8 p.change_link,
+.ie9 p.change_link{
+	position: absolute;
+	height: 90px;
+	background: transparent;
+}
+
+
+/* END SIGNUP LOGIN STYLE */
+
+/*********** START STYLE ABOUT ***********/
+
+#about {
+  padding-bottom: 10%;
+}
+
+.about-page {
+  padding-top: 10%;
+}
+
+h3.big-title {
+  font-size: 38px;
+  text-transform: uppercase;
+  border: 4px solid #ccc;
+  display: inline-block;
+  line-height: 2em;
+  border-left: 0;
+}
+
+.big-title span {
+  color: #ffff00;
+  margin-right: 6
+}
+
+.description {
+  padding-top: 7%;
+}
+.about-page p {
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 0/5em;
+}
+
+.profile-wall {
+  text-align: center;
+}
+
+@media (max-width: 320px) {
+  .profile-wall img {
+    position: relative;;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 600px) {
+  .profile-wall img{
+    display: none;
+  }
+}
+
+
+
+/*********** END STYLE ABOUT ***********/
+
+
+/*********** START STYLE SERVICES ***********/
+
+.services-general {
+  padding-bottom: 10%;
+  background: url("../img/camera.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 10%;
+  margin: 0;
+}
+
+.service-text {
+  padding-top: 20px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+
+.box-services {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 800px;
+  padding-bottom: 10%;
+  margin: auto;
+}
+
+@media screen and (min-width: 380px) and (max-width: 960px) {
+  .box-services {
+    width: auto;
+  }
+}
+
+
+.list-services {
+  padding: 50px;
+  padding-bottom: 50px;
+}
+.lists {
+  padding-left: 10
+}
+
+.list-services h4 {
+  color: #000;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+
+.line{
+  width: 50px;
+  border: 1px solid #ffff00;
+  border-radius: 2px;
+  margin-left: 0;
+}
+
+.fa {
+  color: #ffff00;
+}
+
+@media screen and (min-width: 380px) and (max-width: 730px) {
+  .fa.fa-briefcase {
+    font-size: 14px;
+  }
+}
+
+.fa.fa-briefcase {
+  font-size: 50px;
+}
+
+
+.fa.fa-clock-o {
+  font-size: 50px;
+}
+
+.fa.fa-picture-o {
+  font-size: 50px;
+}
+
+.fa.fa-lightbulb-o {
+  font-size: 50px;
+}
+
+.services-two {
+  padding-top: 10%;
+}
+
+.services-two h4 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+
+/*********** END STYLE SERVICES ***********/
+
+/*********** START STYLE PROJECTS ***********/
+
+.content-list {
+  text-align: right;
+  padding-top: 5%;
+  padding-right: 10%;
+}
+
+.list-menu li{
+  font-size: 18px;
+  line-height: 7px;
+  padding-top: 10%;
+}
+
+.list-menu li a {
+  color: #555;
+}
+
+.list-menu a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Mini Gallery */
+.grid {
+  position: relative;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 900px) {
+  .grid img{
+    width: auto
+  }
+}
+
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0;
+  min-width: 250px;
+  max-width: 490px;
+  max-height: 350px;
+  width: 50%;
+  background: #3085a3;
+  cursor: pointer;
+}
+
+figcaption {
+  height: 200px;
+  text-align: center;
+  position:absolute;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  opacity: 0.8;
+  height: 300px;
+}
+
+.grid figure figcaption {
+  padding: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+  text-align: center;
+	word-spacing: -0.15em;
+	font-weight: 300;
+  padding-top: 10%;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 69.5%;
+  color: #000;
+}
+
+figure.effect-sarah {
+  background: #ffff00;
+}
+
+figure.effect-sarah img {
+  max-width: none;
+  width: -webkit-calc(100%  + 20px);
+  width: calc(100% + 20px);
+  -webkt-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover img {
+  opacity: 0.4;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah figcaption {
+  text-align: left;
+}
+
+figure.effect-sarah h2 {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5em 0;
+}
+
+figure.effect-sarah h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+	padding: 1em 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+
+figure.effect-sarah:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+#team {
+  background: url(../img/team-pic.jpg) no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 10%;
+}
+
+.team-list {
+  padding-top: 10%;
+  text-align: center;
+  margin: 0;
+  padding-left: 7%;
+}
+
+
+.team-list h2 {
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+}
+
+.team-list p {
+  color: rgb(204,204,204);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.team-list img {
+  border: 4px solid  rgb(255, 255, 0);
+  border-radius: 50%;
+}
+
+
+
+/* End mini gallery */
+
+
+
+/*********** END STYLE PROJECTS***********/
